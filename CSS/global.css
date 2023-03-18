@@ -169,7 +169,7 @@ section {
     align-items: center;
 }
 
-.socilas {
+.socials {
     display: flex;
 }
 
@@ -181,7 +181,7 @@ section {
     margin-bottom: 0;
 }
 
-.socilas .icon {
+.socials .icon {
     height: 18px;
 }
 
@@ -222,7 +222,6 @@ section {
     ;
 }
 
-@media screen and (max-width:749px) {}
 
 @media screen and (min-width:750px) {
     .navbar {
@@ -302,8 +301,6 @@ section {
 .services {
     background-color: #F5F5F5;
 }
-
-
 
 .service__icon {
     display: flex;
@@ -396,7 +393,6 @@ section {
 }
 
 
-
 @media screen and (max-width:749px) {
     .portfolio a {
         font-size: 1.4rem;
@@ -418,6 +414,8 @@ section {
     background: #FFF;
     text-transform: uppercase;
     position: relative;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    border: 1px solid #EEE
 }
 
 .card__inner {
@@ -450,10 +448,89 @@ section {
     height: 100%;
 }
 
+.form {
+    max-width: 600px;
+    margin: 4rem auto 0 auto;
+}
 
-@media screen and (min-width:750px) {}
+.form input,
+.form textarea {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
 
-@media screen and (max-width:749px) {}
+.form textarea {
+    min-height: 200px;
+}
+
+.form .btn {
+    border: none;
+    background: #d42627;
+    color: #fff;
+    width: auto;
+    min-width: 160px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.form .btn:hover {
+    cursor: pointer;
+    background: #580a0a;
+}
+
+/*Footer*/
+
+footer {
+    background: #d42627;
+    color: #580a0a;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .grid {
+    align-items: center;
+}
+
+footer .socials {
+    text-align: center;
+    justify-content: center;
+}
+
+footer .socials li {
+    padding: 0 .7rem;
+}
+
+footer .socials a {
+    color: #fff;
+    border: 1px solid #580a0a;
+    border-radius: 50%;
+    padding: 1rem;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+}
+
+footer .socials a:hover {
+    background: #580a0a;
+    color: #333;
+}
+
+@media screen and (min-width:750px) {
+    footer {
+        text-align: left;
+    }
+
+    footer .grid__item {
+        max-width: 33.333%;
+    }
+}
 
 
 .toto {
