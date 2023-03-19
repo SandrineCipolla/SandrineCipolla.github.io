@@ -149,9 +149,9 @@ section {
     letter-spacing: 2px;
 }
 
-.navbar {
+/* .navbar {
     display: none;
-}
+} */
 
 .header li {
     display: inline-flex;
@@ -217,6 +217,53 @@ section {
 
 .burger .bar::after {
     transform: translateY(8px);
+}
+
+@media screen and (max-width:749px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position:fixed;
+        top:55px;
+        left:110%;
+        width:100%;
+        overflow: hidden;
+        opacity: 0;
+        height: calc(100vh - 55px);
+        background: white;
+        transition: all .4s ease-out;
+    }
+    nav .menu li {
+        display: flex;
+        justify-content: center;
+    }
+    nav .menu a {
+        display: block;
+        font-size: 2rem;
+        padding: 2rem;
+    }
+
+    .show-nav nav{
+        opacity: 1;
+        width: 100%;
+        left: 0;
+        z-index: 2;
+    }
+    .show-nav .burger .bar{
+        width: 0;
+    }
+    .burger .bar::before,
+    .burger .bar::after{
+        transition: all .2s ease-out;
+    }
+    .show-nav .burger .bar::before{
+        transform: rotate(-45deg);
+    }
+    .show-nav .burger .bar::after{
+        transform: rotate(45deg);
+    }
 }
 
 @media screen and (min-width:750px) {
@@ -552,5 +599,6 @@ footer .socials a:hover {
 
     to {
         transform: translateX(0%);
+        
     }
 }
