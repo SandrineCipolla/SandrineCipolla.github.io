@@ -163,6 +163,10 @@ section {
     color: #333;
 }
 
+.header a:hover {
+    color:#d42627;
+}
+
 .header .right {
     display: flex;
     align-items: center;
@@ -243,6 +247,7 @@ section {
         display: block;
         font-size: 2rem;
         padding: 2rem;
+        transition: all .4s;
     }
 
     .show-nav nav{
@@ -250,6 +255,11 @@ section {
         width: 100%;
         left: 0;
         z-index: 2;
+    }
+
+    .show-nav nav li a:hover{
+        transform:scale(1.1);
+        text-decoration: none;
     }
     .show-nav .burger .bar{
         width: 0;
@@ -427,6 +437,21 @@ section {
 .portfolio .grid__item {
     max-width: 50%;
     margin-bottom: 0;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+
+.portfolio-filters .grid__item {
+    max-width: 50%;
+    margin-bottom: 0;
+}
+
+.portfolio .grid__item.hide {
+  opacity: 0;
+  max-width: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all .4s ease;
 }
 
 .portfolio-filters a {
@@ -495,6 +520,9 @@ section {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+.card:hover .card__overlay {
+    display: block;
 }
 
 .form {
