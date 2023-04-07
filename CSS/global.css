@@ -549,7 +549,9 @@ section {
     .portfolio-filters .grid__item {
         max-width: 25%;
     }
-
+    .modal .grid__item {
+        max-width: 50%;
+      }
     
 }
 

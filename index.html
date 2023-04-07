@@ -134,6 +134,8 @@
               <img
                 src="./images/avatar.jpg"
                 width="400"
+                height="400"
+                loading="lazy"
                 alt="Sandrine Cipolla - Développeuse Web"
               />
             </div>
@@ -147,7 +149,9 @@
           <div class="grid__item">
             <img
               src="./images/photo.jpg"
-              width="400"
+              width="560"
+              height="453"
+              loading="lazy"
               alt="Sandrine Cipolla - Développeuse Web"
             />
           </div>
@@ -358,6 +362,9 @@
             <div class="card" data-category="web">
               <img
                 src="https://picsum.photos/600/400?random=1"
+                width="365"
+                height="243"
+                loading="lazy"
                 alt="projet"
                 class="card__image"
               />
@@ -377,17 +384,23 @@
                     <div class="grid__item">
                       <img
                         src="https://picsum.photos/600/400?random=2"
+                        width="560"
+                        height="373"
+                        loading="lazy"
                         alt="projet"
                         class="card__image"
                       />
                       <img
                         src="https://picsum.photos/600/400?random=3"
+                        width="560"
+                        height="373"
+                        loading="lazy"
                         alt="projet"
                         class="card__image"
                       />
                     </div>
                     <div class="grid__item">
-                      <h4 class="modal__title h2">Titre de la modal ${id}</h4>
+                      <h4 class="modal__title h2">Titre de la modal 1</h4>
                       <p>
                         <svg
                           width="15"
@@ -449,6 +462,9 @@
             <div class="card" data-category="app">
               <img
                 src="https://picsum.photos/600/400?random=4"
+                width="365"
+                height="243"
+                loading="lazy"
                 alt="projet"
                 class="card__image"
               />
@@ -468,17 +484,23 @@
                     <div class="grid__item">
                       <img
                         src="https://picsum.photos/600/400?random=6"
+                        width="560"
+                        height="373"
+                        loading="lazy"
                         alt="projet"
                         class="card__image"
                       />
                       <img
                         src="https://picsum.photos/600/400?random=7"
+                        width="560"
+                        height="373"
+                        loading="lazy"
                         alt="projet"
                         class="card__image"
                       />
                     </div>
                     <div class="grid__item">
-                      <h4 class="modal__title h2">Titre de la modal ${id}</h4>
+                      <h4 class="modal__title h2">Titre de la modal 2</h4>
                       <p>
                         <svg
                           width="15"
@@ -540,6 +562,9 @@
             <div class="card" data-category="design">
               <img
                 src="https://picsum.photos/600/400?random=5"
+                width="365"
+                height="243"
+                loading="lazy"
                 alt="projet"
                 class="card__image"
               />
@@ -559,17 +584,23 @@
                     <div class="grid__item">
                       <img
                         src="https://picsum.photos/600/400?random=8"
+                        width="560"
+                        height="373"
+                        loading="lazy"
                         alt="projet"
                         class="card__image"
                       />
                       <img
                         src="https://picsum.photos/600/400?random=9"
+                        width="560"
+                        height="373"
+                        loading="lazy"
                         alt="projet"
                         class="card__image"
                       />
                     </div>
                     <div class="grid__item">
-                      <h4 class="modal__title h2">Titre de la modal ${id}</h4>
+                      <h4 class="modal__title h2">Titre de la modal 3</h4>
                       <p>
                         <svg
                           width="15"
@@ -641,13 +672,17 @@
             Necessitatibus incidunt minus rerum?
           </p>
         </div>
-        <form action="contact.php" class="form">
+        <form
+          action="https://formsubmit.co/sandrine.cipolla@gmail.com"
+          class="form"
+        >
           <label for="firstname">
             <input
               type="text"
               name="firstname"
               id="firstname"
               placeholder="Nom"
+              required
           /></label>
           <label for="lastname">
             <input
@@ -657,7 +692,12 @@
               placeholder="Prénom"
           /></label>
           <label for="email">
-            <input type="email" name="email" id="email" placeholder="Email"
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
           /></label>
           <textarea
             name="message"
