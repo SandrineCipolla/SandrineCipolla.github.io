@@ -73,11 +73,24 @@ tabsFilters();
 function showProjectDetails() {
   let links = document.querySelectorAll(".card__link");
   let modals = document.querySelectorAll(".modal");
+  let boutons = document.querySelectorAll(".modal__close");
+
+  let hideModals = () => {
+    modals.forEach((modal) => {
+      modal.classList.remove("show");
+    });
+  };
 
   links.forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
       document.querySelector(`[id=${link.dataset.id}]`).classList.add("show");
+    });
+  });
+
+  boutons.forEach((bouton) => {
+    bouton.addEventListener("click", (event) => {
+      hideModals();
     });
   });
 }

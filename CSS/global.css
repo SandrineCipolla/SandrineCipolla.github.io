@@ -468,6 +468,72 @@ section {
     background-color: #d42627;
 }
 
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: 4;
+    transform: scale(0);
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all 0.5s;
+  }
+  
+  .show.modal {
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    opacity: 1;
+    visibility:visible;
+  }
+  
+  .modal__content {
+    background-color: white;
+    height: 100vh;
+    padding: 5rem 1rem;
+    overflow: auto;
+    text-align: left;
+  }
+  
+  .modal img {
+    margin-bottom: 2rem;
+  }
+  
+  .modal__title {
+    margin: 0 0 2rem;
+  }
+  
+  .modal__close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: 1px solid #eee;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 3.1rem;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .modal .grid__item {
+    max-width: 100%;
+    margin-bottom: 0;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+
+  @media screen and (min-width: 750px) {
+    .modal .grid__item {
+      max-width: 50%;
+    }
+    .modal__content {
+      padding: 3rem;
+    }
+  }
 @media screen and (max-width:749px) {
     .portfolio a {
         font-size: 1.4rem;
@@ -481,7 +547,6 @@ section {
 
     .portfolio .grid__item {
         max-width: 33.3333%;
-
     }
 }
 
@@ -490,7 +555,8 @@ section {
     text-transform: uppercase;
     position: relative;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-    border: 1px solid #EEE
+    border: 1px solid #EEE;
+    overflow: hidden;
 }
 
 .card__inner {
@@ -503,13 +569,15 @@ section {
 }
 
 .card__overlay {
-    display: none;
+    
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
     z-index: 0;
     width: 100%;
     height: 100%;
+    top:110%;
+    transition: all .3s;
 }
 
 .card__overlay a {
@@ -522,7 +590,7 @@ section {
     height: 100%;
 }
 .card:hover .card__overlay {
-    display: block;
+    top:0;
 }
 
 .form {
@@ -630,3 +698,6 @@ footer .socials a:hover {
         
     }
 }
+
+/* components */
+
