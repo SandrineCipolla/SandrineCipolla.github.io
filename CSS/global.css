@@ -30,6 +30,7 @@ h5,
 h6 {
     color: black;
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     line-height: 1;
 }
 
@@ -541,13 +542,15 @@ section {
 }
 
 @media screen and (min-width:750px) {
-    .portfolio-filters .grid__item {
-        max-width: 25%;
-    }
 
     .portfolio .grid__item {
         max-width: 33.3333%;
     }
+    .portfolio-filters .grid__item {
+        max-width: 25%;
+    }
+
+    
 }
 
 .card {
