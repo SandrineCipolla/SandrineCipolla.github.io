@@ -137,7 +137,7 @@ section {
 }
 
 .header {
-    background: #FFF;
+    background:#d42627;
     border-bottom: 1px solid #EEE;
     position: sticky;
     z-index: 1;
@@ -165,7 +165,7 @@ section {
 }
 
 .header a:hover {
-    color:#d42627;
+    color:white;
 }
 
 .header .right {
