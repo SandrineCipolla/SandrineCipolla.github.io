@@ -77,7 +77,7 @@ li {
     margin: 0;
     font-size: 1rem;
     text-transform: uppercase;
-    color: #d42627;
+    color:#8c52ffff;
 }
 
 .container {
@@ -137,7 +137,8 @@ section {
 }
 
 .header {
-    background: #FFF;
+    /* background: #FFF; */
+    background: #eeeeffff;
     border-bottom: 1px solid #EEE;
     position: sticky;
     z-index: 1;
@@ -165,7 +166,7 @@ section {
 }
 
 .header a:hover {
-    color:#d42627;
+    color:#8c52ffff;
 }
 
 .header .right {
@@ -288,8 +289,8 @@ section {
 }
 
 .hero {
-    background: #d42627;
-    color: white;
+    background: #8c52ffff;
+    color: #1a112bff;
     padding: 1rem 0 0 0;
 }
 
@@ -322,7 +323,8 @@ section {
     animation-name: slideInright;
 }
 .hero__avatar img{
-    width: 100%;
+    width: 80%;
+    
 }
 
 @media screen and (max-width:749px) {
@@ -350,13 +352,36 @@ section {
     }
 
     .hero__avatar img {
-        max-width: 400px;
-        border-radius: 50%;
+        max-width: 300px;
+        /* border-radius: 45%; */
     }
 }
 
-.about.section-title {
+.about .section-title {
     margin-top: 2.8rem;
+    align-self:flex-start;
+}
+
+.about .about__container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+
+.about .grid__item  {
+   flex-grow: 1;
+   align-self:center;
+  }
+  
+  
+.about .about__content {
+    flex-grow: 1;
+  }
+.about .about__image{
+    flex-grow: 1;
+   align-self:flex-end;
 }
 
 @media screen and (min-width:750px) {
@@ -468,7 +493,7 @@ section {
 }
 
 .portfolio-filters a.active {
-    color: #FFF;
+    color: #eeeeffff;
     background-color: #d42627;
 }
 
@@ -559,7 +584,7 @@ section {
 }
 
 .card {
-    background: #FFF;
+    background: #eeeeffff;
     text-transform: uppercase;
     position: relative;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
@@ -621,7 +646,7 @@ section {
 .form .btn {
     border: none;
     background: #d42627;
-    color: #fff;
+    color: #eeeeffff;
     width: auto;
     min-width: 160px;
     font-size: 2rem;
@@ -636,8 +661,8 @@ section {
 /*Footer*/
 
 footer {
-    background: #d42627;
-    color: #580a0a;
+    background:#8c52ffff;
+    color: #312150;
     text-align: center;
     font-size: 1.4rem;
 }
@@ -660,8 +685,8 @@ footer .socials li {
 }
 
 footer .socials a {
-    color: #fff;
-    border: 1px solid #580a0a;
+    color: #eeeeffff;
+    border: 1px solid #312150;
     border-radius: 50%;
     padding: 1rem;
     width: 42px;
@@ -672,7 +697,7 @@ footer .socials a {
 }
 
 footer .socials a:hover {
-    background: #580a0a;
+    background: #FF914D;
     color: #333;
 }
 
@@ -707,5 +732,18 @@ footer .socials a:hover {
     }
 }
 
-/* components */
+/* svg compétences */
+.competences-dev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+}
+.langage {
+    border-radius: 50%;
+    margin: 10px;
+    position: relative;
+  }
+
 
