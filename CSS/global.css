@@ -1,4 +1,4 @@
-/* * selectionne tous les élements, permet de faire une sorte de reset pour appliquer ensuite ce que l'on souhaite */
+
 
 /*Base*/
 
@@ -47,7 +47,7 @@ h2,
 
 h3,
 .h3 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
 }
 
 a {
@@ -166,7 +166,8 @@ section {
 }
 
 .header a:hover {
-    color:#8c52ffff;
+    color:#FF914D;
+    font-weight: bold;
 }
 
 .header .right {
@@ -323,7 +324,7 @@ section {
     animation-name: slideInright;
 }
 .hero__avatar img{
-    width: 80%;
+    width: 100%;
     
 }
 
@@ -357,32 +358,45 @@ section {
     }
 }
 
-.about .section-title {
-    margin-top: 2.8rem;
-    align-self:flex-start;
-}
-
-.about .about__container {
+.about {
+    text-align: center;
+    background-color: #F5F5F5;
+  }
+  
+  .content-container {
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    
+    justify-content: space-between;
+    align-items: flex-start;
+    /* margin-top: 10px; */
+  }
+  
+  .image-column {
+    flex-basis: 30%;
+    margin-top: 100px;
+  }
+  
+  .texte-column {
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  
+  .about_titre {
+    text-align: center;
+    /* margin-bottom: 10px; */
   }
 
-.about .grid__item  {
-   flex-grow: 1;
-   align-self:center;
+  .about__text{
+    column-count: 2;
+    column-gap: 50px;
   }
-  
-  
-.about .about__content {
-    flex-grow: 1;
+  .texte-column p {
+    text-align: left;
   }
-.about .about__image{
-    flex-grow: 1;
-   align-self:flex-end;
-}
+  .texte-column p:first-child {
+    margin-top: 0;
+  }
 
 @media screen and (min-width:750px) {
     .about img {
@@ -437,6 +451,9 @@ section {
     }
 }
 
+.skills {
+    background: #8c52ffff;
+}
 .skills h4,
 .skills p {
     margin: 0 0 0.3rem 0;
@@ -625,10 +642,13 @@ section {
 .card:hover .card__overlay {
     top:0;
 }
-
+.contact{
+    background: #8c52ffff;
+}
 .form {
     max-width: 600px;
     margin: 4rem auto 0 auto;
+    
 }
 
 .form input,
@@ -645,7 +665,7 @@ section {
 
 .form .btn {
     border: none;
-    background: #d42627;
+    background: #312150;
     color: #eeeeffff;
     width: auto;
     min-width: 160px;
@@ -655,13 +675,13 @@ section {
 
 .form .btn:hover {
     cursor: pointer;
-    background: #580a0a;
+    background:#FF914D;
 }
 
 /*Footer*/
 
 footer {
-    background:#8c52ffff;
+    background: #eeeeffff;
     color: #312150;
     text-align: center;
     font-size: 1.4rem;
