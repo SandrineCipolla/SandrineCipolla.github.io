@@ -47,7 +47,7 @@ h2,
 
 h3,
 .h3 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 a {
@@ -69,7 +69,7 @@ li {
 
 .list-unstyled {
     list-style: none;
-    margin: 0;
+    margin-bottom:0;
     padding: 0;
 }
 
@@ -92,15 +92,17 @@ li {
 
 .grid {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
 }
 
 .grid__item {
-    flex-grow: 1;
-    flex-shrink: 0;
+    /* flex-grow: 1;
+    flex-shrink: 0; */
+    /* flex: 1 0 calc(50% - 20px); */
     width: 100%;
-    padding: 1rem;
+    /* padding: 1rem; */
+    margin-right: 60px;
 }
 
 @media screen and (min-width:750px) {
@@ -456,25 +458,35 @@ section {
 }
 .skills h4,
 .skills p {
-    margin: 0 0 0.3rem 0;
+    margin: 0 0 1rem 0;
 }
 
 .skills li {
     background-color: #F5F5F5;
-    border-left: 3px solid rgba(240, 55, 55, 0.8);
+    border-left: 3px solid #FF914Dba;
     padding: .9rem 2rem;
 }
 
-.skills .progressbar {
+/* .competences-dev {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  } */
+  .langage  {
+    /* width: 40%; */
+    /* padding: 0.5rem; */
+    /* box-sizing: border-box; */
+  }
+/* .skills .progressbar {
     background: #F5F5F5;
     color: white;
     margin-bottom: 1rem;
-}
+} */
 
-.skills .bar {
+/* .skills .bar {
     background: #d42627;
     padding: 1rem;
-}
+} */
 
 .portfolio {
     background-color: #F5F5F5;
@@ -752,18 +764,41 @@ footer .socials a:hover {
     }
 }
 
-/* svg compétences */
-.competences-dev{
+
+  /* svg compétences */
+.competences-dev,
+.competences-graph,
+.competences-outils
+ {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    width: 300px;
-}
-.langage {
-    border-radius: 50%;
-    margin: 10px;
-    position: relative;
+    align-items: flex-start; 
+    flex-wrap: wrap; 
   }
 
+  .langage,
+  .graphisme,
+  .outils
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 16%;
+    margin-bottom: 10px;
+  }
+  
+  /* .langage img,
+  .graphisme img,
+  .outils img
+   {
+    margin-top: 5px;
+  } */
+  
+  .langage p,
+  .graphisme p,
+  .outils p
+  {
+    text-align: center;
+  }
 
+  
+ 
