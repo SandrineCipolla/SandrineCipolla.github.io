@@ -191,9 +191,12 @@ section {
 }
 
 .socials .icon {
-    height: 22px;
+    height: 25px;
 }
-
+/* .icone-contour {
+    border: 1px solid black;
+    padding: 1px;
+} */
 .burger {
     background: none;
     border: none;
@@ -531,7 +534,7 @@ section {
     height: 30px;
     transition: transform 0.3s ease;
   }
-  
+
   /* .cv-button a:hover .cv-icon img {
     transform: rotate(180deg);
   } */
@@ -544,9 +547,9 @@ section {
     opacity: 0;
   }
   
-  .cv-button a:active .cv-icon img {
+  /* .cv-button a:active .cv-icon img {
     transform: scale(0.8) rotate(180deg);
-  }
+  } */
   .cv-button a.downloaded {
     background-color: #FF914D;
   }
