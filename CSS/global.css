@@ -157,9 +157,6 @@ section {
     letter-spacing: 2px;
 }
 
-/* .navbar {
-    display: none;
-} */
 
 .header li {
     display: inline-flex;
@@ -194,7 +191,7 @@ section {
 }
 
 .socials .icon {
-    height: 18px;
+    height: 22px;
 }
 
 .burger {
@@ -467,6 +464,7 @@ section {
 
 .skills {
     background: #8c52ffff;
+    position: relative;
 }
 .skills h4,
 .skills p {
@@ -478,30 +476,102 @@ section {
 
 .skills li {
     background-color: #F5F5F5;
-    border-left: 3px solid #FF914Dba;
+    border-left: 5px solid #FF914Dba;
     padding: .9rem .9rem;
 }
-
-/* .competences-dev {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  } */
-  .langage  {
-    /* width: 40%; */
-    /* padding: 0.5rem; */
-    /* box-sizing: border-box; */
+/* .section_cv {
+    position: absolute;
+    bottom: 50px;
+    right: 25%;
   }
-/* .skills .progressbar {
-    background: #F5F5F5;
-    color: white;
-    margin-bottom: 1rem;
-} */
+  .section_cv h4{
+    text-align: center
+  }
 
-/* .skills .bar {
-    background: #d42627;
-    padding: 1rem;
-} */
+  .upload_cv {
+    cursor: pointer;
+    background-color: #FF914D;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload_cv:hover {
+    background-color: #FF753E;
+  } */
+  .cv-button {
+    display: inline-block;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #312150;
+    transition: background-color 0.3s ease;
+    margin-top:150px;
+  }
+  
+  .cv-button:hover {
+    background-color: #FF914D;
+  }
+  
+  .cv-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .cv-icon {
+    margin-right: 10px;
+  }
+  
+  .cv-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* .cv-button a:hover .cv-icon img {
+    transform: rotate(180deg);
+  } */
+  
+  .cv-text {
+    transition: opacity 0.3s ease;
+  }
+  
+  .cv-button a:active .cv-text {
+    opacity: 0;
+  }
+  
+  .cv-button a:active .cv-icon img {
+    transform: scale(0.8) rotate(180deg);
+  }
+  .cv-button a.downloaded {
+    background-color: #FF914D;
+  }
+  .cv-button.clicked {
+    background-color: #FF914D;
+  }
+  
+  .cv-button a.downloaded .cv-text {
+    display: none;
+  }
+  
+  .cv-button a.downloaded .cv-icon {
+    margin-right: 0;
+  }
+  
+  .cv-button a.downloaded .cv-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* .cv-button a.downloaded .cv-icon img {
+    transform: rotate(180deg);
+  } */
+  
 
 .portfolio {
     background-color: #F5F5F5;

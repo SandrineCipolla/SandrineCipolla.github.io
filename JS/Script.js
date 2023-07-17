@@ -1,10 +1,26 @@
-//selectors
+/*Modif icone CV téléchargé/dans le menu*/
+function changeIconCV() {
+  document.getElementById('cv-icon').addEventListener('click', function () {
+    this.src = '../images/approuve.png';
+    this.alt = 'Cv téléchargé';
+  });
+}
+changeIconCV();
 
-// let header = document.querySelector(".header .container");
-// console.log(header);
+/*Modif icone CV dans compétences*/
+function downloadCV() {
+  const cvButton = document.querySelector('.cv-button');
+  const cvIcon = cvButton.querySelector('.cv-icon img');
+  const cvText = cvButton.querySelector('.cv-text');
 
-// let grids = document.querySelectorAll(".grid");
-// console.log(grids);
+  cvButton.addEventListener('click', () => {
+    cvIcon.src = '../images/approuve.png';
+    cvIcon.alt = 'Cv téléchargé';
+    cvText.textContent = "C'est dans la poche!";
+    cvButton.classList.add('clicked');      // Ajoute la classe 'clicked' au bouton
+  });
+}
+downloadCV();
 
 /*Menu Mobile*/
 function menuMobile() {
