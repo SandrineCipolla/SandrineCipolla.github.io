@@ -128,7 +128,7 @@ li p {
 /*Sections*/
 
 section {
-    padding: 5.5rem 0;
+    padding: 7.5rem 0;
 }
 
 .section-title {
@@ -302,7 +302,7 @@ section {
 .hero {
     background: #8c52ffff;
     color: #1a112bff;
-    padding: 1rem 0 0 0;
+    /* padding: 1rem 0 0 0; */
 }
 
 .hero .title {
