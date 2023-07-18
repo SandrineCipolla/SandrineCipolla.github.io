@@ -40,9 +40,55 @@ function menuMobile() {
 menuMobile();
 
 /*Portfolio*/
+// function tabsFilters() {
+//   const tabs = document.querySelectorAll(".portfolio-filters a");
+//   const projects = document.querySelectorAll(".portfolio .card");
+
+//   const resetActiveLinks = () => {
+//     tabs.forEach((element) => {
+//       element.classList.remove("active");
+//     });
+//   };
+
+//   const showProjects = (element) => {
+//     console.log(element);
+//     projects.forEach((project) => {
+//       let filter = project.getAttribute("data-category");
+
+//       if (element === "all") {
+//         project.parentNode.classList.remove("hide");
+//         return;
+//       }
+//       console.log("tutu");
+
+//       //   if (filter !== element) {
+//       //     project.parentNode.classList.add("hide");
+//       //   } else {
+//       //     project.parentNode.classList.remove("hide");
+//       //   }
+
+//       //conditions en opérateur ternaire:
+//       filter !== element
+//         ? project.parentNode.classList.add("hide")
+//         : project.parentNode.classList.remove("hide");
+//     });
+//   };
+
+//   tabs.forEach((element) => {
+//     element.addEventListener("click", (event) => {
+//       event.preventDefault();
+//       let filter = element.getAttribute("data-filter");
+//       showProjects(filter);
+//       resetActiveLinks();
+//       element.classList.add("active");
+//     });
+//   });
+// }
+// tabsFilters();
 function tabsFilters() {
   const tabs = document.querySelectorAll(".portfolio-filters a");
   const projects = document.querySelectorAll(".portfolio .card");
+  const projectsContainer = document.querySelector(".projets");
 
   const resetActiveLinks = () => {
     tabs.forEach((element) => {
@@ -50,41 +96,51 @@ function tabsFilters() {
     });
   };
 
-  const showProjects = (element) => {
-    console.log(element);
+  const showProjects = (selectedCategories) => {
+    projectsContainer.classList.remove("centered"); // Supprime la classe centrée par défaut
+
     projects.forEach((project) => {
-      let filter = project.getAttribute("data-category");
+      let categories = project.getAttribute("data-category").split(" ");
+      let shouldShow = false;
 
-      if (element === "all") {
-        project.parentNode.classList.remove("hide");
-        return;
+      if (selectedCategories.includes("all")) {
+        shouldShow = true;
+      } else {
+        selectedCategories.forEach((category) => {
+          if (categories.includes(category)) {
+            shouldShow = true;
+          }
+        });
       }
-      console.log("tutu");
 
-      //   if (filter !== element) {
-      //     project.parentNode.classList.add("hide");
-      //   } else {
-      //     project.parentNode.classList.remove("hide");
-      //   }
-
-      //conditions en opérateur ternaire:
-      filter !== element
-        ? project.parentNode.classList.add("hide")
-        : project.parentNode.classList.remove("hide");
+      if (shouldShow) {
+        project.parentNode.classList.remove("hide");
+      } else {
+        project.parentNode.classList.add("hide");
+      }
     });
+
+    // Ajoute la classe centrée si la catégorie sélectionnée est "all"
+    if (selectedCategories.includes("all")) {
+      projectsContainer.classList.add("centered");
+    }
   };
 
   tabs.forEach((element) => {
     element.addEventListener("click", (event) => {
       event.preventDefault();
       let filter = element.getAttribute("data-filter");
-      showProjects(filter);
+      let selectedCategories = filter.split(" ");
+      showProjects(selectedCategories);
       resetActiveLinks();
       element.classList.add("active");
     });
   });
 }
+
 tabsFilters();
+
+
 
 function showProjectDetails() {
   const links = document.querySelectorAll(".card__link");

@@ -96,7 +96,7 @@ li p {
 
 .grid {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -105,9 +105,13 @@ li p {
     flex-shrink: 0; */
     /* flex: 1 0 calc(50% - 20px); */
     width: 100%;
-    /* padding: 1rem; */
-    margin-right: 60px;
+    padding: 1rem;
+    margin-right:30px;
 }
+/* .centered .grid__item{
+    display: flex;
+    flex-wrap: wrap;
+  } */
 
 @media screen and (min-width:750px) {
     .container {
@@ -469,6 +473,11 @@ section {
     background: #8c52ffff;
     position: relative;
 }
+.skills__list{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
 .skills h4,
 .skills p {
     margin: 0 0 1rem 0;
@@ -579,8 +588,13 @@ section {
 .portfolio {
     background-color: #F5F5F5;
 }
-
+.projets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .portfolio .grid__item {
+  
     max-width: 50%;
     margin-bottom: 0;
     opacity: 1;
@@ -598,8 +612,10 @@ section {
   padding: 0;
   overflow: hidden;
   transition: all .4s ease;
+  margin-right: -8px;
 }
 
+  
 .portfolio-filters a {
     color: #333;
     background-color: #EEE;
@@ -611,9 +627,34 @@ section {
 
 .portfolio-filters a.active {
     color: #eeeeffff;
-    background-color: #d42627;
+    background-color: #8c52ffff;
 }
-
+.portfolio-filters a:hover {
+    color: #eeeeffff;
+    background-color: #FF914D;
+}
+.portfolio .card {
+    max-width: 100%;
+    margin: 1rem auto; 
+    opacity: 1;
+    transition: all 1s ease;
+  }
+  .portfolio .card.hide {
+    opacity: 0;
+    max-width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  @media (max-width: 767px) {
+    .projets {
+      justify-content: flex-start;
+    }
+  
+    .portfolio .card {
+      max-width: 100%;
+    }
+  }
 .modal {
     visibility: hidden;
     opacity: 0;
@@ -785,19 +826,37 @@ footer {
     color: #312150;
     text-align: center;
     font-size: 1.4rem;
+
 }
 
 footer p {
-    margin: 0;
+    margin: -5px;
 }
+/* .moi {
+    margin-bottom: 5px;
+} */
 
 footer .grid {
+    display: flex;
     align-items: center;
+    justify-content: space-around;
+    margin-top:-20px;
+    margin-bottom: -10px;
 }
 
 footer .socials {
+    display: flex;
+    align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: flex-end;
+}
+
+footer .grid__item .socials{
+    margin-right: -40px;
+    margin-bottom: 10px;
+}
+footer .grid__item {
+    margin-top:0px
 }
 
 footer .socials li {
