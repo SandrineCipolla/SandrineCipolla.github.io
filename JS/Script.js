@@ -85,6 +85,7 @@ menuMobile();
 //   });
 // }
 // tabsFilters();
+
 function tabsFilters() {
   const tabs = document.querySelectorAll(".portfolio-filters a");
   const projects = document.querySelectorAll(".portfolio .card");
@@ -212,3 +213,50 @@ const observerIntersectionAnimation = () => {
 };
 
 observerIntersectionAnimation();
+
+// //Afficher les images en taille réelle
+// // Sélectionnez toutes les images de classe "modal__image"
+// const images = document.querySelectorAll(".modal__image");
+
+// // Créez une fonction pour afficher l'image en taille réelle
+// function showImageOnModal(e) {
+//   e.stopPropagation(); // Empêche la propagation de l'événement
+//   const clickedImage = e.target;
+//   const modal = document.getElementById("modal-3");
+
+//   // Créez un nouvel overlay pour afficher l'image en taille réelle
+//   const overlay = document.createElement("div");
+//   overlay.classList.add("image-zoom-overlay"); // Utilisez la nouvelle classe "image-zoom-overlay"
+//   overlay.addEventListener("click", hideImage);
+//   modal.appendChild(overlay);
+
+//   // Créez un nouvel élément <img> pour afficher l'image agrandie
+//   const enlargedImg = document.createElement("img");
+//   enlargedImg.src = clickedImage.src;
+//   enlargedImg.classList.add("modal__enlarged-image");
+//   overlay.appendChild(enlargedImg);
+
+//   // Créez un bouton de fermeture pour l'overlay en utilisant la même classe .modal__close
+//   const closeButton = document.createElement("button");
+//   closeButton.innerHTML = "&times;"; // Utilisez le symbole "×" (multiplication) comme icône de fermeture
+//   closeButton.classList.add("image-zoom-overlay__close"); // Utilisez la même classe .modal__close
+//   closeButton.addEventListener("click", hideImage);
+//   overlay.appendChild(closeButton);
+
+//   modal.classList.add("modal--hidden");
+// }
+
+// // Créez une fonction pour masquer l'image en taille réelle
+// function hideImage() {
+//   const modal = document.getElementById("modal-3");
+//   const overlay = modal.querySelector(".image-zoom-overlay"); // Utilisez la classe .image-zoom-overlay ici
+
+//   // Reste du code pour masquer l'image en taille réelle
+//   overlay.remove();
+//   modal.classList.remove("modal--hidden");
+// }
+
+// // Ajoutez un gestionnaire d'événement click à chaque image pour afficher l'image en taille réelle
+// images.forEach((image) => {
+//   image.addEventListener("click", showImageOnModal);
+// });
