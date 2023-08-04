@@ -720,24 +720,46 @@ section {
 .présentation{
   flex: 1;
   margin-bottom:20px;
-  
 }
 .column-container {
   /* display: flex; */
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Deux colonnes de largeur égale */
-  grid-gap: 300px; /* Ajoutez un espace entre les deux colonnes */
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: 60% 40%;
+  grid-gap: 100px; 
   margin:0 30px;
 }
-.informations,
+
 .technologies {
   flex: 1;
   margin-right: 50px;
-  /* max-width: 50%; */
- 
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  align-items: center;
+  
+  /* margin-bottom:- 20px; */
+}
+.stack img{
+  margin-bottom: 10px;
+}
+
+.contraintes{
+  display: block;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.infos{
+  padding-top: 20px;
 }
 .modal__image:hover {
-  transform: scale(1.2); /* Zoom de 120% au survol */
+  transform: scale(1.2); 
 }
 .image-zoom-overlay {
   position: fixed;
@@ -797,16 +819,26 @@ section {
   color: #666;
   cursor: pointer;
 }
+.button-container {
+  display: flex;
+}
 .modal__video-button {
   color: #eeeeffff;
   background-color: #8c52ffff;
   border: none;
   padding: 8px 16px;
-  /* padding: 1rem 2rem; */
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
   margin-bottom: 20px;
+  margin-right: 20px;
+  display: flex; 
+  align-items: center;
+}
+.modal__video-button svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 750px) {
@@ -1004,7 +1036,7 @@ footer .socials a:hover {
 /* svg compétences */
 .competences-dev,
 .competences-graph,
-.competences-outils {
+.competences-outils{
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
