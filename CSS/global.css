@@ -822,7 +822,8 @@ section {
 .button-container {
   display: flex;
 }
-.modal__video-button {
+.modal__video-button,
+.modal__github-button {
   color: #eeeeffff;
   background-color: #8c52ffff;
   border: none;
@@ -836,6 +837,11 @@ section {
   align-items: center;
 }
 .modal__video-button svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+.modal__github-button svg {
   width: 20px;
   height: 20px;
   margin-left: 10px;
