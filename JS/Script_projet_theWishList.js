@@ -61,7 +61,12 @@ function hideImage() {
   const overlay = modal.querySelector(".image-zoom-overlay"); // Utilisez la classe .image-zoom-overlay ici
 
   // Reste du code pour masquer l'image en taille réelle
-  overlay.remove();
+  // overlay.remove();
+  // modal.classList.remove("modal--hidden");
+  if (overlay) {
+    overlay.remove();
+  }
+
   modal.classList.remove("modal--hidden");
 }
 

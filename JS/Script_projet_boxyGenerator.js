@@ -1,43 +1,23 @@
-// Liste des noms de fichiers d'images dans votre dossier "images"
-const imageFiles = [
-    
-  ];
-
-  // Fonction pour choisir une image aléatoire parmi celles du dossier "images"
-  function getRandomImage() {
-    const randomIndex = Math.floor(Math.random() * imageFiles.length);
-    return imageFiles[randomIndex];
-  }
-
-  // Obtient le nom de fichier d'image aléatoire
-  const randomImage = getRandomImage();
-
-  // Remplace l'URL de l'image par l'URL de l'image aléatoire
-  const cardImage = document.getElementById("randomImage");
-  cardImage.src = "../images/Projets/TheWishlist/" + randomImage;
-
-  // Met à jour l'attribut "alt" de l'image (facultatif, mais recommandé pour l'accessibilité)
-  cardImage.alt = "image du projet The WishList"; // Remplacez par une description appropriée
-
-
-//Afficher les images en taille réelle
-
-// Sélectionnez toutes les images de classe "modal__image"
 const images = document.querySelectorAll(".modal__image");
 
-// Créez une fonction pour afficher l'image en taille réelle
 function showImageOnModal(e) {
   e.stopPropagation(); // Empêche la propagation de l'événement
   const clickedImage = e.target;
-  const modal = document.getElementById("modal-3");
+  // const modal = document.getElementById("projet-7_modal-7");
+  const modal = document.getElementById("modal-7");
 
-  // Créez un nouvel overlay pour afficher l'image en taille réelle
+  // Vérifie si l'élément modal a été trouvé
+  if (!modal) {
+    console.error("L'élément modal n'a pas été trouvé.");
+    return;
+  }
+
   const overlay = document.createElement("div");
+  // overlay.setAttribute("id", "projet-7_image-zoom-overlay"); // Utilisez un ID unique pour le projet 7
   overlay.classList.add("image-zoom-overlay"); // Utilisez la nouvelle classe "image-zoom-overlay"
   overlay.addEventListener("click", hideImage);
   modal.appendChild(overlay);
 
-  // Créez un nouvel élément <img> pour afficher l'image agrandie
   const enlargedImg = document.createElement("img");
   enlargedImg.src = clickedImage.src;
   enlargedImg.classList.add("modal__enlarged-image");
@@ -55,11 +35,15 @@ function showImageOnModal(e) {
 
 // Créez une fonction pour masquer l'image en taille réelle
 function hideImage() {
-  const modal = document.getElementById("modal-3");
+  const modal = document.getElementById("modal-7");
+  // const modal = document.getElementById("projet-7_modal-7");
   const overlay = modal.querySelector(".image-zoom-overlay"); // Utilisez la classe .image-zoom-overlay ici
 
   // Reste du code pour masquer l'image en taille réelle
-  overlay.remove();
+  if (overlay) {
+    overlay.remove();
+  }
+
   modal.classList.remove("modal--hidden");
 }
 
@@ -68,13 +52,13 @@ images.forEach((image) => {
   image.addEventListener("click", showImageOnModal);
 });
 
-// 
+//
 // Sélectionnez tous les boutons de classe "modal__video-button"
 const videoButtons = document.querySelectorAll(".modal__video-button");
 
 // Créez une fonction pour afficher la vidéo en taille réelle dans une fenêtre modale
 function showVideoModal(videoUrl) {
-  const modal = document.getElementById("modal-3");
+  const modal = document.getElementById("modal-7");
 
   // Créez un nouvel overlay pour afficher la vidéo en taille réelle
   const overlay = document.createElement("div");
@@ -100,7 +84,7 @@ function showVideoModal(videoUrl) {
 
 // Créez une fonction pour masquer la vidéo en taille réelle et supprimer l'overlay
 function hideVideoModal() {
-  const modal = document.getElementById("modal-3");
+  const modal = document.getElementById("modal-7");
   const overlay = modal.querySelector(".image-zoom-overlay");
 
   overlay.remove();
@@ -115,4 +99,3 @@ videoButtons.forEach((button) => {
     showVideoModal(videoUrl);
   });
 });
-
